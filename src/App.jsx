@@ -1,13 +1,15 @@
 import { Outlet } from "react-router"
+import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <>
       <nav>
-        Navbar
+        <Navbar/>
       </nav>
-      <main>
+     
+      <main className="max-w-7xl mx-auto min-h-screen " >
         <Outlet />
       </main>
     </>
