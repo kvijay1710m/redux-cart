@@ -30,25 +30,19 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Title */}
         <div className="text-xl font-bold">
-          <a href="#" className="text-gray-800 hover:text-blue-600">
+          <Link to="/" className="text-gray-900 hover:text-blue-600 font-medium">
             Redux
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Links */}
         <div className="flex space-x-6">
-          <a
-            href="#home"
-            className="text-gray-600 hover:text-blue-600 font-medium"
-          >
+          <Link to="/" className="text-gray-600 hover:text-blue-600 font-medium">
             Home
-          </a>
-          <a
-            href="#products"
-            className="text-gray-600 hover:text-blue-600 font-medium"
-          >
+          </Link>
+          <Link to="/product" className="text-gray-600 hover:text-blue-600 font-medium">
             Products
-          </a>
+          </Link>
         </div>
 
         {/* Right Side: Cart and Profile */}
@@ -78,7 +72,7 @@ export default function Navbar() {
               </span>
             </button>
             {isCartOpen && (
-              <div className="absolute right-0 mt-2 w-60 bg-gray-200 rounded-lg shadow-lg">
+              <div className="absolute right-0 mt-2 w-60 bg-gray-300 rounded-lg shadow-lg">
                 <div className="p-4">
                   <div className="flex justify-between items-center">
                     <span className="text-lg font-bold">8 Items</span>
@@ -101,9 +95,10 @@ export default function Navbar() {
                   </div>
                   <span className="block text-gray-600">Subtotal: $999</span>
                   <Link to="/cart">
-                    <button className="btn btn-primary bg-blue-500 text-white btn-block mt-2">
+                    <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 w-full">
                       View Cart
                     </button>
+
                   </Link>
                 </div>
               </div>
@@ -128,4 +123,3 @@ export default function Navbar() {
     </div>
   );
 }
-  
